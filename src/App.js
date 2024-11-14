@@ -9,8 +9,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  BrowserRouter
+  // BrowserRouter
 } from "react-router-dom";
 
 
@@ -43,11 +42,11 @@ function App() {
 <Navbar title="TextUtil" about="About" mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert} showAlert={showAlert}/>
   <Routes>
-    <Route path="/about" element={<About />} />
     <Route
       path="/"
       element={<TextForm heading="Enter your text to analyse" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />}
     />
+    <Route path="/about" element={<About />} />
   </Routes>
 </Router>
 </>
