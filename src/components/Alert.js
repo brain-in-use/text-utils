@@ -3,9 +3,11 @@ import React from 'react'
 
 export default function Alart(props) {
   return (
-   props.alert && <div class={`alert alert-${props.alert.type}`} role="alert">
+   <div style={{height:50}}>
+    {props.alert && <div class={`alert alert-${props.alert.type}`} role="alert">
   <strong>{props.alert.type.charAt(0).toUpperCase()+props.alert.type.substring(1)} {props.alert.message}</strong>
 </div>
-
+}
+</div>
   );
 }
